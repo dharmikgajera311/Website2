@@ -44,3 +44,4 @@ print(__name__)
 if __name__ == "__main__":
   app.run(host="0.0.0.0", port=8080)
   print("I'm inside the if now yap!") 
+Expose 3306
