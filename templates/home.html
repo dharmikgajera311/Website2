@@ -11,10 +11,25 @@
       height:350px;
       object-fit:cover;
     }
+    .navbar-brand {
+      width: 75px; /* Set the width of your logo */
+      height: 75px; /* Set the height of your logo */
+      border-radius: 50%; /* Make the logo round by setting border-radius to 50% */
+      overflow: hidden; /* Ensure that content within the logo is not visible outside the rounded shape */
+    }
+
+    /* Additional styling for demonstration purposes */
+    .navbar-brand img {
+      width: 100%; /* Make sure the image fills the rounded container */
+      height: 100%; /* Make sure the image fills the rounded container */
+      object-fit: cover; /* Maintain aspect ratio while covering the container */
+    }
+
   </style>
   <title>GAJERA'S</title>
 </head>
 <body>
+  {% include 'nav.html' %}
   <div class="container">
   <h1 class="text-center mt-4 mb-4">{{company_name}}'S FOUNDATION</h1>
     <h6 class="text-center mt-4 mb-4">FOUNDER: DHARMIK GAJERA</h6>
