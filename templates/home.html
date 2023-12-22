@@ -12,32 +12,39 @@
       object-fit:cover;
     }
     .navbar-brand {
-      width: 75px; /* Set the width of your logo */
-      height: 75px; /* Set the height of your logo */
-      border-radius: 50%; /* Make the logo round by setting border-radius to 50% */
-      overflow: hidden; /* Ensure that content within the logo is not visible outside the rounded shape */
+      width: 50px; 
+      height: 50px; 
+      border-radius: 50%; 
+      /* overflow: hidden; */
     }
-
-    /* Additional styling for demonstration purposes */
     .navbar-brand img {
-      width: 100%; /* Make sure the image fills the rounded container */
-      height: 100%; /* Make sure the image fills the rounded container */
-      object-fit: cover; /* Maintain aspect ratio while covering the container */
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
     }
-
+    .text {
+        color: black; /* Set the color of the text */
+        font-size: 25px; /* Adjust the font size of the text */
+    }
+  
   </style>
   <title>GAJERA'S</title>
 </head>
 <body>
   {% include 'nav.html' %}
+   <img id="banner" class="img-fluid" src="https://webpage1--dharmikgajera16.repl.co/static/banner2.jpg" alt="banner">
   <div class="container">
   <h1 class="text-center mt-4 mb-4">{{company_name}}'S FOUNDATION</h1>
     <h6 class="text-center mt-4 mb-4">FOUNDER: DHARMIK GAJERA</h6>
-  <img id="banner" class="img-fluid" src="https://webpage1--dharmikgajera16.repl.co/static/banner2.jpg" alt="banner">
-  <h2 class="text-center" style="margin-top:5%; ">About us</h2>
+  <div class="row" style="margin-bottom: 16px;">
+    <div class="col-md-8">
   <p class="lead">The Gajera Foundation stands as a beacon of philanthropy and social responsibility, dedicated to fostering positive change in communities across the globe. Founded on the principles of compassion and empowerment, the foundation tirelessly pursues initiatives in education, healthcare, and sustainable development. With a vision to uplift the underprivileged and create a more equitable world, Gajera Foundation strategically invests in innovative projects that address pressing social challenges. Its commitment to education is evident through scholarships and educational infrastructure, while healthcare programs prioritize accessible and quality medical services. Embracing a holistic approach, the foundation leverages partnerships and collaborations to maximize its impact. Gajera Foundation, driven by a passion for social transformation, exemplifies the profound impact that dedicated philanthropy can have on creating a brighter and more inclusive future for all.</p>
-  <h2 class="text-center">Open Position</h2>
   <p>
+  </div>
+    <div class="col-4">
+      <img src="static/desk_photo.jpg" style ="height:320px;border-radius:4px;" >
+    </div>
+    <h2 class="text-center">Open Position</h2>
     <div>
     {% for job in jobs %}
       {% include 'job.html' %}
@@ -49,5 +56,6 @@
     <p class = "mt-4">Copyright 2023, theduniverse</p>
     </div>
   </div>
+  {% include 'footer.html' %}
 </body>
 </html>
